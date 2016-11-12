@@ -1,0 +1,6 @@
+Hi, I'm a log.
+20:02:28.859 Index found at "Server/index.html"
+20:02:29.399 Json: [{"id":"1","date":"08.11.2016","data":[{"id":"1","dispname":"Broiler file","energy":"110","protein":"23","fat":"2","carbon":"1","L":"0","G":"0","M":"0","VL":"0","V":"0","status":null,"allergy":null,"origin":"Kauhava"}]},{"id":"2","date":"09.11.2016","data":[{"id":"2","dispname":"Risotto Verde","energy":"142","protein":"3","fat":"7","carbon":"16","L":"1","G":"1","M":"0","VL":"1","V":"1","status":null,"allergy":"Nuts","origin":"Livorno"}]},{"id":"5","date":"10.11.2016","data":[{"id":"5","dispname":"Paella","energy":"101","protein":"7","fat":"3","carbon":"12","L":"0","G":"1","M":"0","VL":"0","V":"0","status":null,"allergy":"Shrimp","origin":"Valencia"}]}]
+20:02:29.411 Listening at port 80...
+20:02:32.835 [0/10.190.71.62] Received GET for: /history
+20:02:46.688 [0/10.190.71.62] Received GET for: /history

@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы исходного кода">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Util">
+      <UniqueIdentifier>{5c4193ba-7c66-40b1-a51f-f8f6351f80ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Main">
+      <UniqueIdentifier>{0d4c41bc-8626-4720-b039-a5a3a25826ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Socket">
+      <UniqueIdentifier>{96e735e3-a4be-416d-ae4c-66019470a720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Precompiled Header">
+      <UniqueIdentifier>{9fabd72c-b409-43e9-b0b4-fe9545040565}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Thread">
+      <UniqueIdentifier>{bb9e74b0-e1bf-4873-bee1-3e3b9fcf05e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Client">
+      <UniqueIdentifier>{31ba9a7a-3c4d-400b-962b-38827c9d9bf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\JSON">
+      <UniqueIdentifier>{a72a170c-f85d-4ef6-bb0d-ea8292ec7724}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>Файлы исходного кода\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="socket.h">
+      <Filter>Файлы исходного кода\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="thread.h">
+      <Filter>Файлы исходного кода\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="client.h">
+      <Filter>Файлы исходного кода\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="json.h">
+      <Filter>Файлы исходного кода\JSON</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Файлы исходного кода\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Precompiled Header</Filter>
+    </ClCompile>
+    <ClCompile Include="socket_main.cpp">
+      <Filter>Файлы исходного кода\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="util_main.cpp">
+      <Filter>Файлы исходного кода\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_main.cpp">
+      <Filter>Файлы исходного кода\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="client_main.cpp">
+      <Filter>Файлы исходного кода\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="dish_main.cpp">
+      <Filter>Файлы исходного кода\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="json_main.cpp">
+      <Filter>Файлы исходного кода\JSON</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
