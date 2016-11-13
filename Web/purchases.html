@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hack The Meal - Purchases</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/small-business.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$.ajax({
+				type: "GET",
+				url: "http://127.0.0.1/history",
+				success: function(data){
+					var x = 0;
+					var decode_json = JSON.parse(data);
+					decode_json.forEach(function(current, index, arr){
+						$("#products").append("<tr><td>" + current.data[0].dispname + "</td><td>" + current.data[0].energy + "</td><td>2.50 EUR</td><td>" + current.date + "</td><td id='vote" + x + "'><input type='image' src='./img/happy.png' style='width: 10%; height:10%;' onclick='document.getElementById(\"vote" + x + "\").innerHTML = \"Vote recorded\";addBonus();' />  <input type='image' src='./img/sad.png' style='width: 10%; height:10%;' onclick='document.getElementById(\"vote" + x + "\").innerHTML = \"Vote recorded\";addBonus();' /></td></tr>");
+						x++;
+					});
+				}			
+			});
+		});
+		
+		var bonus = 0;
+		function addBonus(){
+			bonus = bonus + 2;
+			document.getElementById("amount").innerHTML = bonus;
+		};
+	</script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+					<li>
+                        <a href="./index.html">Main</a>
+                    </li>
+                    <li>
+                        <a href="./purchases.html">Purchases</a>
+                    </li>
+                    <li>
+                        <a href="./schedule.html">Schedule</a>
+                    </li>
+                    <li>
+                        <a href="./feedback.html">Feedback Form</a>
+                    </li>
+                </ul>
+				<ul class="pull-right nav navbar-nav">
+					<li>
+						<a href="#">Login</a>
+					</li>
+				</ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Heading Row -->
+        <div class="row">
+            <div class="col-md-8">
+                <img class="img-responsive img-rounded" src="./img/food.jpg" alt="">
+            </div>
+            <!-- /.col-md-8 -->
+            <div class="col-md-4">
+                <h1>Purchases</h1>
+                <p>You can access recent purchases here.</p>
+            </div>
+            <!-- /.col-md-4 -->
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Call to Action Well -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="well text-center">
+                    Use your ID card in our restaraunt to add a purchase to this list. You have <a id="amount">0</a> bonus points on your account.
+                </div>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <table class="table">
+		<thead>
+			<tr class="bg-primary">
+				<td width="20%">
+					Name
+				</td>
+				<td width="20%">
+					Calories
+				</td>
+				<td width="20%">
+					Price
+				</td>
+				<td width="20%">
+					Date
+				</td>
+				<td width="20%">
+					Vote
+				</td>
+			</tr>
+		</thead>
+		<tbody id="products">
+		</tbody>
+		</table>
+        <!-- /.row -->
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Code4U</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
